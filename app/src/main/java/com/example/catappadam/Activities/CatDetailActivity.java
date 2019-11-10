@@ -51,7 +51,7 @@ public class CatDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_detail);
         //Setting all the links
-        constraintLayout = findViewById(R.id.detail_cl);
+       // constraintLayout = findViewById(R.id.detail_cl);
         catName = findViewById(R.id.cat_name);
         catDescription = findViewById(R.id.cat_description);
         catOrigin = findViewById(R.id.cat_origin);

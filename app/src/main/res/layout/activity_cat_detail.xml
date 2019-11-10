@@ -7,227 +7,218 @@
     android:layout_height="match_parent"
     tools:context=".Activities.CatDetailActivity">
 
-    <Button
-        android:id="@+id/cat_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:text="Add to favourites"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
         android:id="@+id/cat_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F7F3F3"
-        app:layout_constraintBottom_toTopOf="@+id/cat_button"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cat_button"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:id="@+id/cat_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Name"
+                android:textColor="#FF5722"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_photo" />
+
+            <ImageView
+                android:id="@+id/cat_photo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/noimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/cat_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Name"
-                    android:textColor="#FF5722"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_photo" />
+            <TextView
+                android:id="@+id/cat_descriptionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Description"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_name" />
 
-                <ImageView
-                    android:id="@+id/cat_photo"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="5dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/noimage"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/cat_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="actual description"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_descriptionName" />
 
-                <TextView
-                    android:id="@+id/cat_descriptionName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Description"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_name" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Temperament"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_description" />
 
-                <TextView
-                    android:id="@+id/cat_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="actual description"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_descriptionName" />
+            <TextView
+                android:id="@+id/cat_temperament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="temperament"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Temperament"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_description" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Weight:"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
 
-                <TextView
-                    android:id="@+id/cat_temperament"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="temperament"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            <TextView
+                android:id="@+id/cat_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="actual weight"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Weight:"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Life Span:"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/cat_weight"
+                app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
 
-                <TextView
-                    android:id="@+id/cat_weight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="actual weight"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@id/textView6"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
+            <TextView
+                android:id="@+id/cat_lifespan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="lifespan"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Life Span:"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/cat_weight"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Origin:"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
 
-                <TextView
-                    android:id="@+id/cat_lifespan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="lifespan"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@id/textView8"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_temperament"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="20dp" />
+            <TextView
+                android:id="@+id/cat_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="origin"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
 
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Origin:"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Dog friendliness level"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/cat_origin"
+                app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
 
-                <TextView
-                    android:id="@+id/cat_origin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="origin"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@id/textView10"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_lifespan"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="20dp" />
+            <TextView
+                android:id="@+id/cat_dogfriendliness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="friendliness"
+                android:textColor="#000000"
+                app:layout_constraintStart_toEndOf="@id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Dog friendliness level"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/cat_origin"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Wikipedia Link:"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cat_origin" />
 
-                <TextView
-                    android:id="@+id/cat_dogfriendliness"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="friendliness"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@id/textView12"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_lifespan"
-                    tools:layout_editor_absoluteX="20dp"
-                    tools:layout_editor_absoluteY="20dp" />
+            <TextView
+                android:id="@+id/cat_wikilink"
+                android:layout_width="281dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="link"
+                android:textColor="#000000"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toEndOf="@id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/cat_origin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Wikipedia Link:"
-                    android:textColor="#FF5722"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_origin" />
-
-                <TextView
-                    android:id="@+id/cat_wikilink"
-                    android:layout_width="282dp"
-                    android:layout_height="18dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="link"
-                    android:textColor="#000000"
-                    app:layout_constraintStart_toEndOf="@id/textView15"
-                    app:layout_constraintTop_toBottomOf="@+id/cat_origin" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/cat_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FF5722"
+        android:text="Add to favourites"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

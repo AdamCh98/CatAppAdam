@@ -61,7 +61,7 @@ public class SearchFragment extends Fragment {
         //Creating search
         catSearchView = view.findViewById(R.id.search_bar);
         catSearchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        catSearchView.setQueryHint("Click on icon to search for cat");
+        catSearchView.setQueryHint("Type here to search for cat breeds");
 
         //Prevent the keyboard from pushing up the entire layout
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
