@@ -41,7 +41,6 @@ public class CatDetailActivity extends AppCompatActivity {
     private TextView catWikilink;
     private TextView catDogFriend;
     private ArrayList<Image> imageArrayList;
-    private ConstraintLayout constraintLayout;
     private String imageUrl;
     private Button favButton;
     private String catNameToast;
@@ -51,7 +50,6 @@ public class CatDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cat_detail);
         //Setting all the links
-       // constraintLayout = findViewById(R.id.detail_cl);
         catName = findViewById(R.id.cat_name);
         catDescription = findViewById(R.id.cat_description);
         catOrigin = findViewById(R.id.cat_origin);
@@ -88,8 +86,8 @@ public class CatDetailActivity extends AppCompatActivity {
             catOrigin.setText("[Doesn't exist]");
         }
         if(cat.getWeight()!= null) {
-            //Using metric system since we're Australian!!!!!
-            catOrigin.setText(cat.getWeight().getMetric() + " KG");
+            //Using metric system
+            catWeight.setText(cat.getWeight().getMetric() + " KG");
         } else {
             catWeight.setText("[Doesn't exist]");
         }

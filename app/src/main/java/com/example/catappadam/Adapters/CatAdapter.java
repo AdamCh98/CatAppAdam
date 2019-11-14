@@ -122,7 +122,6 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder> i
             notifyDataSetChanged();;
 
 
-
         }
     };
 }
