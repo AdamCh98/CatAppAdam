@@ -136,6 +136,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="lifespan"
+                android:paddingEnd="16dp"
                 android:textColor="#000000"
                 app:layout_constraintStart_toEndOf="@id/textView8"
                 app:layout_constraintTop_toBottomOf="@+id/cat_temperament" />
@@ -181,7 +182,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:paddingEnd="16dp"
                 android:text="friendliness"
+                app:layout_constrainedWidth="true"
                 android:textColor="#000000"
                 app:layout_constraintStart_toEndOf="@id/textView12"
                 app:layout_constraintTop_toBottomOf="@+id/cat_lifespan" />
@@ -205,6 +208,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="link"
+                android:paddingEnd="16dp"
                 android:textColor="#000000"
                 app:layout_constrainedWidth="true"
                 app:layout_constraintStart_toEndOf="@id/textView15"

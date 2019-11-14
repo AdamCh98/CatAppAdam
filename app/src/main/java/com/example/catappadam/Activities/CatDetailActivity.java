@@ -107,7 +107,7 @@ public class CatDetailActivity extends AppCompatActivity {
             catWikilink.setText("[Doesn't exist]");
         }
         if(cat.getDog_friendly() != 0) {
-            catDogFriend.setText("Level: " + cat.getDog_friendly());
+            catDogFriend.setText(" " + cat.getDog_friendly());
         } else {
             catDogFriend.setText("[Doesn't exist]");
         }
