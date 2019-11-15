@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:text="@string/cat_description"
+                android:text="@string/cat_dog"
                 android:textColor="#FF5722"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/cat_origin"
