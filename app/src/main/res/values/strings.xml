@@ -3,4 +3,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cat_description">Description</string>
+    <string name="cat_temp">Temperament</string>
+    <string name="cat_weight">Weight</string>
+    <string name="cat_origin">Origin</string>
+    <string name="cat_life">Life span</string>
+    <string name="cat_wiki">Wikipedia link</string>
+    <string name="cat_dog">Dog friendliness level</string>
 </resources>

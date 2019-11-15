@@ -65,51 +65,51 @@ public class CatDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         String id = intent.getStringExtra("id");
-        System.out.println(id);
         final Cat cat = FakeDatabase.getCatById(id);
         catNameToast = cat.getName();
 
         //Assigning attributes contingent on whether they exist
+        catPhoto.setImageResource(R.drawable.loadingimage);
         if (cat.getName() != null) {
             catName.setText(cat.getName());
         } else {
-            catName.setText("[Doesn't Exist]");
+            catName.setText("Unavailable");
         }
         if (cat.getDescription() != null) {
             catDescription.setText(cat.getDescription());
         } else {
-            catDescription.setText("[Doesn't exist]");
+            catDescription.setText("Unavailable");
         }
         if (cat.getOrigin() != null) {
             catOrigin.setText(cat.getOrigin());
         } else {
-            catOrigin.setText("[Doesn't exist]");
+            catOrigin.setText("Unavailable");
         }
         if(cat.getWeight()!= null) {
             //Using metric system
             catWeight.setText(cat.getWeight().getMetric() + " KG");
         } else {
-            catWeight.setText("[Doesn't exist]");
+            catWeight.setText("Unavailable");
         }
         if(cat.getTemperament()!= null) {
             catTemperament.setText(cat.getDescription());
         } else {
-            catTemperament.setText("[Doesn't exist]");
+            catTemperament.setText("Unavailable");
         }
         if(cat.getLife_span()!= null) {
             catLifespan.setText(cat.getLife_span() + " years");
         } else {
-            catLifespan.setText("[Doesn't exist]");
+            catLifespan.setText("Unavailable");
         }
         if(cat.getWikipedia_url()!= null) {
             catWikilink.setText(cat.getWikipedia_url());
         } else {
-            catWikilink.setText("[Doesn't exist]");
+            catWikilink.setText("Unavailable");
         }
         if(cat.getDog_friendly() != 0) {
             catDogFriend.setText(" " + cat.getDog_friendly());
         } else {
-            catDogFriend.setText("[Doesn't exist]");
+            catDogFriend.setText("Unavailable");
         }
 
         //Image
